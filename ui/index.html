@@ -147,7 +147,7 @@
   // The FastAPI backend, deployed on Railway from deployment/Dockerfile.
   // Override it with window.OUR_LLM_API_URL (e.g. "http://127.0.0.1:8000")
   // to point this same page at a locally-running `uvicorn deployment.app:app`.
-  const API_URL = window.OUR_LLM_API_URL || "https://cosmopediasmall-lm-production.up.railway.app";
+  const API_URL = window.OUR_LLM_API_URL ||"https://cosmopediasmall-lm-production.up.railway.app";
 
   document.getElementById("apiLabel").textContent = API_URL;
 
