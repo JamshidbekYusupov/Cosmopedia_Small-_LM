@@ -107,9 +107,8 @@
 <div class="wrap">
   <header>
     <h1>Our LLM</h1>
-    <p>A ~10M-parameter transformer, pretrained from scratch on TinyStories.
-       Type a prompt and watch it continue the text — this is next-token
-       prediction, running live.</p>
+    <p>A small GPT-style language model built from scratch in PyTorch and pretrained on the HuggingFaceTB/cosmopedia dataset (auto_math_text subset).
+       This is a learning / educational project.<p>
   </header>
 
   <div class="card">
@@ -148,7 +147,7 @@
   // The FastAPI backend, deployed on Railway from deployment/Dockerfile.
   // Override it with window.OUR_LLM_API_URL (e.g. "http://127.0.0.1:8000")
   // to point this same page at a locally-running `uvicorn deployment.app:app`.
-  const API_URL = window.OUR_LLM_API_URL || "cosmopediasmall-lm-production.up.railway.app";
+  const API_URL = window.OUR_LLM_API_URL || "https://cosmopediasmall-lm-production.up.railway.app";
 
   document.getElementById("apiLabel").textContent = API_URL;
 
