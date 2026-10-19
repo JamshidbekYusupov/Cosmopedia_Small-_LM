@@ -1,5 +1,5 @@
 fastapi==0.143.3
-numpy==2.5.3
+numpy
 PyYAML==6.0.3
 tokenizers==0.23.2
 uvicorn[standard]
