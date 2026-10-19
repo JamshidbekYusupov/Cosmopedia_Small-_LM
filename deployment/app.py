@@ -53,7 +53,7 @@ class GenerateRequest(BaseModel):
     temperature: float = Field(0.8, gt=0.0, le=2.0)
     top_k: int = Field(50, ge=0, le=8000)
     top_p: float = Field(0.95, gt=0.0, le=1.0)
-    repetition_penalty: float = Field(1.1, ge=1.0, le=2.0)
+    repitition_penalty: float = Field(1.1, ge=1.0, le=2.0)
 
 
 class GenerateResponse(BaseModel):
@@ -73,7 +73,7 @@ def generate(req: GenerateRequest):
         temperature=req.temperature,
         top_k=req.top_k,
         top_p=req.top_p,
-        repetition_penalty=req.repetition_penalty,
+        repitition_penalty=req.repitition_penalty,
     )
     return GenerateResponse(
         text=text, tokens_generated=tokens_generated, latency_ms=latency_ms
